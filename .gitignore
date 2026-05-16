@@ -3,4 +3,5 @@ __pycache__/
 *.pyc
 .venv/
 connection.php
-put_on_webserver_wetter.py
+put_on_webserver/wetter.php
+recieverscript/wetter.py
