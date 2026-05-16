@@ -1,0 +1,12 @@
+<?php
+declare(strict_types=1);
+
+return [
+    'db' => [
+        'host' => 'localhost',
+        'name' => 'wetter',
+        'user' => 'wetter',
+        'pass' => 'YourPasswordHere',
+        'charset' => 'utf8mb4',
+    ],
+];

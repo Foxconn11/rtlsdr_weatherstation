@@ -1,0 +1,6 @@
+recieverscript/settings.py
+__pycache__/
+*.pyc
+.venv/
+connection.php
+put_on_webserver_wetter.py

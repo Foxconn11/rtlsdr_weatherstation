@@ -1,0 +1,1 @@
+@reboot screen -d -m /home/daniel/wetter_rx_script/recieverscript/wettersdr.sh &
