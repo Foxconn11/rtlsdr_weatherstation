@@ -2,7 +2,7 @@
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
-VENV_PATH="$SCRIPT_DIR/.#venv"
+VENV_PATH="$SCRIPT_DIR/.venv"
 PYTHON_SCRIPT="$SCRIPT_DIR/weather_receiver.py"
 
 source "$VENV_PATH/bin/activate"
