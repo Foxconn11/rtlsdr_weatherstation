@@ -1,7 +1,9 @@
 #!/usr/bin/env bash
 
-VENV_PATH="/home/daniel/wetter_rx_script/recieverscript/venv"
-PYTHON_SCRIPT="/home/daniel/wetter_rx_script/recieverscript/weather_receiver.py"
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
+VENV_PATH="$SCRIPT_DIR/venv"
+PYTHON_SCRIPT="$SCRIPT_DIR/weather_receiver.py"
 
 source "$VENV_PATH/bin/activate"
 
