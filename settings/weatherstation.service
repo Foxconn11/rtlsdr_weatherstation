@@ -1,0 +1,26 @@
+[Unit]
+Description=Auto-RX Wetterstation rtl_433 Receiver
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=simple
+
+# HIER anpassen:
+WorkingDirectory=/home/daniel/rtlsdr_weatherstation/recieverscript
+
+ExecStart=/bin/bash -lc '\
+if [ -x ./venv/bin/python ]; then PYTHON="./venv/bin/python"; \
+elif [ -x ./.venv/bin/python ]; then PYTHON="./.venv/bin/python"; \
+else echo "[ERROR] Kein venv Python gefunden: ./venv/bin/python oder ./.venv/bin/python"; exit 1; fi; \
+echo "[INFO] Starte rtl_433 Wetterstation Receiver..."; \
+exec rtl_433 -d :00000999 -R 32 -F json | "$PYTHON" -u ./weather_receiver.py'
+
+Restart=always
+RestartSec=60
+
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target
